@@ -1,0 +1,546 @@
+/* Import Professional & Comic-Like Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Baloo+2:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Baloo 2', sans-serif; /* Inter for readability, Baloo for a slight comic touch */
+}
+
+/* 🌟 Modern Top Navigation */
+.top-nav {
+    position: fixed;
+     top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3498db, #2ecc71); /* Smooth color blend */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;
+    color: white;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌍 Logo with Auto Rotation */
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    transition: transform 5s linear infinite;
+}
+
+@keyframes rotateLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+.logo-container:hover .logo {
+    animation: rotateLogo 5s infinite;
+}
+
+/* 🌟 "GO Connects" Branding */
+.site-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔎 Search Icon */
+.search-icon {
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    position: fixed;
+    top: 70px;
+    right: 2.5%;
+    
+}
+
+.search-icon:hover {
+    color: #f1c40f; /* Secondary color */
+}
+
+/* 📌 Hide Search Bar by Default */
+.search-bar {
+    position: fixed;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: none; /* ⬅️ Hidden by default */
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar input {
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+/* 🔻 Bottom Navigation - Fixed & Stylish */
+/* 📌 Bottom Navigation */
+/* 📌 Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3498db, #2ecc71); /* Matching top nav */
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Navigation Items */
+.nav-item {
+    color: white;
+    text-align: center;
+    flex: 1;
+    text-decoration: none;
+    font-size: 12px; /* Larger Font for Better Visibility */
+    transition: all 0.3s ease-in-out;
+    padding: 10px 0;
+}
+
+/* 🚀 Icons */
+.nav-item i {
+    font-size: 24px; /* Bigger Icons for Visibility */
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* 🌟 Active Nav Item */
+.nav-item.active {
+    /* Highlight color */
+    color:  #f1c40f;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* 🌟 Hover Effect */
+.nav-item:hover {
+   Color: rgba(241, 196, 15, 0.6);
+    border-radius: 8px;
+}
+
+
+/* 🚀 Floating Post Button */
+.nav-item .post-button {
+    background: #f1c40f; /* Highlight color */
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  padding: 20px 20px;
+  text-decoration: none;
+  margin-bottom:20px ;
+
+  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+/* 🔥 Hover Effect */
+i.fa-circle-plus:hover {
+    color:#ffdd57;
+    transform: translateX(0.5%) scale(1.1);
+}
+
+/* 🌟 Click Effect */
+i.fa-circle-plus:active {
+    transform: translateX(-0.5%) scale(0.9);
+}
+i.fa-circle-plus{
+    width:100%;
+    font-size: 40px;
+    color:white ;
+  
+   
+}
+
+
+#main-content{
+    padding-top: 60px;
+    
+}
+
+
+/* 📌 Scholarship Container */
+.scholarship-container {
+    max-width: 800px;
+    margin: 40px auto; /* Added margin to prevent being hidden */
+    padding-bottom:80px;
+    padding: 20px;
+    text-align: left;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+/* 🎓 Scholarship Title */
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* 🖼️ Scholarship Image */
+.scholarship-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* 📜 Short Description */
+.short-description {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 📌 Scholarship Details */
+.scholarship-details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* 🔹 Hide Additional Content Initially */
+.more-details {
+         display: none;
+     }
+     .more-details.show {
+         display: block;
+     }
+     
+/* 🔽 "See More" Button */
+.see-more-btn {
+    background: none;
+    border: none;
+    color: #0073e6;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+}
+
+.see-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* 🎥 Video Styling */
+.video-container {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* ✅ Timeline & Apply Button Section */
+.extra-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* ✅ Availability Status */
+.timelinevalid {
+    background: #2ecc71;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 📌 Apply Button */
+.apply-btn {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #2980b9;
+}
+/* Ensure proper stacking and overflow handling */
+body { 
+    
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Add hardware acceleration for smooth transitions */
+.logo, .scholarship-container, .more-details {
+    will-change: transform, opacity; /* Optimize for animations */
+    backface-visibility: hidden; /* Fix rendering artifacts */
+}
+
+/* Prevent black images during loading */
+img {
+    background-color: transparent; /* Avoid black background */
+    opacity: 1; 
+    display: block;/* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+img.loaded {
+    opacity: 1; /* Fully visible after loading */
+}
+
+
+
+ .section {
+            display: none; /* Hide all sections by default */
+        }
+        .section.active {
+            display: block; /* Show the active section */
+        }
+        
+  /* 6. FAQ Section Styling */
+.faq {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* 6. FAQ Section Styling */
+.faq {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.faq h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.faq details {
+    margin-bottom: 10px;
+}
+
+.faq summary {
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.faq summary:hover {
+    color: #3498db;
+}
+
+.faq p {
+    margin: 5px 0 0 20px;
+    color: #2c3e50;
+}
+
+/* 7. Social Media Sharing Styling with FontAwesome Icons */
+.social-share {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.social-share p {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.social-share a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.social-share a:hover {
+    background: #2980b9;
+}
+
+/* 8. Step-by-Step Application Guide Styling */
+.application-guide {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.application-guide h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.application-guide ol {
+    padding-left: 20px;
+}
+
+.application-guide li {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.application-guide strong {
+    color: #3498db;
+}
+
+.application-guide ul {
+    margin: 5px 0 0 20px;
+    list-style-type: disc;
+}
+
+.step-action {
+    margin: 10px 0;
+}
+
+.step-note {
+    background: #e9f5ff;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.step-note p {
+    margin: 0;
+}
+
+#toggleNav {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#toggleNav:hover {
+    opacity: 0.8;
+}
+#toggleNav:active {
+    opacity: 0.4;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: -200px; /* Hide the nav by default */
+    top: 0;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /* Ensure the nav is above other content */
+}
+
+nav.visible {
+    left: 0; /* Show the nav when toggled */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+nav ul h3{ 
+    font-size: 20px;
+   color: orange;
+}
+
+nav ul h2{ 
+    font-size: 30px;
+   color: green;
+   font-weight: bold;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+nav ul li a.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    transition: filter 0.3s ease-in-out;
+}
+
+main.blurred {
+    filter: blur(2px); /* Blur the main content when nav is visible */
+}
+
+#dynamic-content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
