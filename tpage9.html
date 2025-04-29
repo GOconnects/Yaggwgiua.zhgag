@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Showcase | task </title>
+  
+    <style>
+    :root {
+      --ivory: #FFFFF0;
+      --sepia: #704214;
+      --parchment: #F5E7D4;
+      --spacing-unit: 20px;
+    }
+    
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--ivory);
+      color: var(--sepia);
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Refined Layout */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-unit);
+    }
+    
+    /* Elegant Countdown */
+    #countdown {
+      position: fixed;
+      top: var(--spacing-unit);
+      right: var(--spacing-unit);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sepia);
+      color: var(--ivory);
+      border-radius: 50%;
+      font-size: 1.3rem;
+      font-weight: 700;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Vintage Paper Sections */
+    .section {
+      padding: calc(var(--spacing-unit) * 2) 0;
+      position: relative;
+    }
+    
+    .section::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--sepia), transparent);
+    }
+    
+    /* Ad Containers */
+    .ad-container {
+      margin: calc(var(--spacing-unit) * 2) auto;
+      padding: var(--spacing-unit);
+      background: white;
+      border: 1px solid rgba(112,66,20,0.1);
+      border-radius: 2px;
+      max-width: 728px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    /* Letter Examples */
+    .letter-example {
+      background: var(--parchment);
+      padding: calc(var(--spacing-unit) * 1.5);
+      margin: var(--spacing-unit) 0;
+      border-left: 3px solid var(--sepia);
+      position: relative;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .letter-example::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background: url('vintage-corner.png') no-repeat;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+    
+
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      :root {
+        --spacing-unit: 15px;
+      }
+      
+      .container {
+        padding: 0 15px;
+      }
+    }
+  </style>
+  
+<link rel="stylesheet" href="main.css" type="text/css" media="all" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Hero Section -->
+    <section class="content-section">
+      <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Luxury Automotive Showcase</h1>
+      <p style="font-size: 1.1rem; max-width: 600px;">
+        Experience the pinnacle of automotive excellence in this exclusive presentation.
+      </p>
+    </section>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flying Bird Task - Match the Birds!</title>
+    <style>
+
+        .game-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            animation: fly 2s ease-in-out infinite alternate;
+        }
+        @keyframes fly {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px auto;
+        }
+        .tile {
+            height: 70px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tile:hover {
+            background-color: #d6eaf8;
+        }
+        .tile.matched {
+            background-color: #d5f5e3;
+            cursor: default;
+        }
+        .tile.flipped {
+            background-color: white;
+        }
+        #score {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #7f8c8d;
+        }
+        #reset-btn {
+            padding: 8px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        #reset-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐦 Flying Bird Task</h1>
+        <div class="timer">Time left: <span id="time">30</span>s</div>
+        <div id="score">Moves: 0</div>
+        <button id="reset-btn">New Game</button>
+        <div class="game-board" id="game-board"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const birds = ['🐦', '🦜', '🦅', '🦉', '🐧', '🦢', '🦩', '🐥'];
+            const tiles = [...birds, ...birds]; // 8 pairs (16 tiles)
+            
+            let flippedTiles = [];
+            let matchedTiles = [];
+            let moves = 0;
+            let timeLeft = 30;
+            let timer;
+            let boardLocked = false;
+
+            const gameBoard = document.getElementById('game-board');
+            const scoreDisplay = document.getElementById('score');
+            const timeDisplay = document.getElementById('time');
+            const resetBtn = document.getElementById('reset-btn');
+
+            // Shuffle tiles
+            function shuffle(array) {
+                return array.sort(() => Math.random() - 0.5);
+            }
+
+            // Start/reset timer
+            function startTimer() {
+                clearInterval(timer);
+                timeLeft = 60;
+                timeDisplay.textContent = timeLeft;
+                timer = setInterval(() => {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        boardLocked = true;
+                        setTimeout(() => alert("Time's up! Try again."), 100);
+                    }
+                }, 1000);
+            }
+
+            // Initialize game
+            function initGame() {
+                flippedTiles = [];
+                matchedTiles = [];
+                moves = 0;
+                boardLocked = false;
+                scoreDisplay.textContent = `Moves: ${moves}`;
+                gameBoard.innerHTML = '';
+                
+                shuffle(tiles).forEach((bird, index) => {
+                    const tile = document.createElement('div');
+                    tile.className = 'tile';
+                    tile.dataset.bird = bird;
+                    tile.dataset.index = index;
+                    tile.addEventListener('click', flipTile);
+                    gameBoard.appendChild(tile);
+                });
+
+                startTimer();
+            }
+
+            // Flip tile
+            function flipTile() {
+                if (boardLocked || this.classList.contains('matched') || flippedTiles.includes(this)) return;
+
+                this.textContent = this.dataset.bird;
+                this.classList.add('flipped');
+                flippedTiles.push(this);
+
+                if (flippedTiles.length === 2) {
+                    boardLocked = true;
+                    moves++;
+                    scoreDisplay.textContent = `Moves: ${moves}`;
+                    checkMatch();
+                }
+            }
+
+            // Check for match
+            function checkMatch() {
+                const [tile1, tile2] = flippedTiles;
+                const isMatch = tile1.dataset.bird === tile2.dataset.bird;
+
+                if (isMatch) {
+                    tile1.classList.add('matched');
+                    tile2.classList.add('matched');
+                    matchedTiles.push(tile1, tile2);
+                    flippedTiles = [];
+                    boardLocked = false;
+
+                    if (matchedTiles.length === tiles.length) {
+                        clearInterval(timer);
+                        setTimeout(() => alert(`You won in ${moves} moves with ${timeLeft}s left!`), 300);
+                    }
+                } else {
+                    setTimeout(() => {
+                        tile1.textContent = '';
+                        tile2.textContent = '';
+                        tile1.classList.remove('flipped');
+                        tile2.classList.remove('flipped');
+                        flippedTiles = [];
+                        boardLocked = false;
+                    }, 800);
+                }
+            }
+
+            // Reset game
+            resetBtn.addEventListener('click', initGame);
+
+            // Start the game
+            initGame();
+        });
+    </script>
+</body>
+</html>
+    <!-- Luxury Car Showcase -->
+    <section class="content-section">
+      <h2>2024 Masterpieces</h2>
+      <div class="car-showcase">
+        <div class="car-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgf_CDpO8LYd6aR83C2z5f3WDz2oeE4r2TPEyMqo2Rgg&s" alt="Rolls-Royce Phantom" class="car-img">
+          <div class="car-details">
+            <h3>Rolls-Royce Phantom</h3>
+            <p>The ultimate luxury sedan with handcrafted interiors and a 6.75L V12 engine.</p>
+          </div>
+        </div>
+        
+        <div class="car-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHHt6Pvr35Vmx3vW-J164YwkGYCXnDuFVaZe_uMAuyg&s" alt="Bentley Continental GT" class="car-img">
+          <div class="car-details">
+            <h3>Bentley Continental GT</h3>
+            <p>Grand tourer with 650HP W12 engine and diamond-quilted leather seats.</p>
+          </div>
+        </div>
+        
+        <div class="car-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYV1Zys9MMJR8YNZrpPggoQCxAOoq8cDPIDFVL2949ow&s" alt="Mercedes-Maybach S-Class" class="car-img">
+          <div class="car-details">
+            <h3>Mercedes-Maybach S680</h3>
+            <p>V12-powered luxury with rear executive seating and champagne cooler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Ad Slot 2 (Mid-content) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="autorelaxed"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+    <!-- More Luxury Content -->
+    <section class="content-section">
+      <h2>Exclusive Ownership Benefits</h2>
+      <p>Our concierge service includes:</p>
+      <ul>
+        <li>Worldwide vehicle delivery</li>
+        <li>24/7 VIP support</li>
+        <li>Private test drive experiences</li>
+      </ul>
+    </section>
+    
+    <!-- Ad Slot 3 (Bottom) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-6t+ed+2i-1n-4w"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+
+ <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+  
+  <!-- Final CTA -->
+  <div id="good-mark">Thank you</div>
+
+  <script src="product.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML, CSS, and JavaScript for free and become a web developer. Discover the best resources, tips, and step-by-step guides to start your coding journey.">
+    <meta name="keywords" content="learn HTML, learn CSS, learn JavaScript, free coding resources, web development">
+    <title>Learn HTML, CSS, JavaScript Free and Become a Web Developer</title>
+    
+     <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjbw3Zo02hAT_AkWK_VoskbI51Liot3JS-j9aQOV-fw&s'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learn HTML, CSS, JavaScript Free and Become a Web Developer</h1>
+    </header>
+
+    <!-- Video Section -->
+    <section>
+        <h2>Watch: How to Start Learning Web Development</h2>
+        <iframe src="https://www.youtube.com/embed/placeholder" title="Web Development Guide" allowfullscreen></iframe>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction to Web Development</h2>
+        <p>Web development is one of the most in-demand skills today. With HTML, CSS, and JavaScript, you can build websites, apps, and even start a career as a web developer. The best part? You can learn it all for free! Let’s get started.</p>
+    </section>
+
+    <!-- Step 1: Learn HTML -->
+    <section>
+        <h2>Step 1: Learn HTML</h2>
+        <p>HTML (HyperText Markup Language) is the foundation of web development. It’s used to structure content on the web. Here’s how to get started:</p>
+        <ul>
+            <li><strong>Free Resources:</strong> Use platforms like freeCodeCamp, W3Schools, and MDN Web Docs.</li>
+            <li><strong>Practice:</strong> Build simple web pages to reinforce your learning.</li>
+            <li><strong>Key Concepts:</strong> Tags, elements, attributes, and semantic HTML.</li>
+        </ul>
+    </section>
+<div class="mid">
+    
+</div>
+    <!-- Step 2: Learn CSS -->
+    <section>
+        <h2>Step 2: Learn CSS</h2>
+        <p>CSS (Cascading Style Sheets) is used to style and design web pages. Here’s how to master it:</p>
+        <ul>
+            <li><strong>Free Resources:</strong> Try CSS-Tricks, freeCodeCamp, and Codecademy.</li>
+            <li><strong>Practice:</strong> Style your HTML pages with layouts, colors, and animations.</li>
+            <li><strong>Key Concepts:</strong> Selectors, box model, flexbox, and grid.</li>
+        </ul>
+    </section>
+
+    <!-- Step 3: Learn JavaScript -->
+    <section>
+        <h2>Step 3: Learn JavaScript</h2>
+        <p>JavaScript adds interactivity to websites. Here’s how to learn it:</p>
+        <ul>
+            <li><strong>Free Resources:</strong> Use freeCodeCamp, JavaScript.info, and MDN Web Docs.</li>
+            <li><strong>Practice:</strong> Build interactive features like forms, sliders, and games.</li>
+            <li><strong>Key Concepts:</strong> Variables, functions, DOM manipulation, and APIs.</li>
+        </ul>
+    </section>
+
+    <!-- Step 4: Build Projects -->
+    <section>
+        <h2>Step 4: Build Projects</h2>
+        <p>Apply your skills by building real-world projects:</p>
+        <ul>
+            <li><strong>Portfolio Website:</strong> Showcase your skills and projects.</li>
+            <li><strong>To-Do App:</strong> Practice JavaScript and DOM manipulation.</li>
+            <li><strong>Responsive Blog:</strong> Use HTML, CSS, and media queries.</li>
+        </ul>
+    </section>
+<div class="end">
+    
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flying Bird Task - Match the Birds!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .game-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            animation: fly 2s ease-in-out infinite alternate;
+        }
+        @keyframes fly {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px auto;
+        }
+        .tile {
+            height: 70px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tile:hover {
+            background-color: #d6eaf8;
+        }
+        .tile.matched {
+            background-color: #d5f5e3;
+            cursor: default;
+        }
+        .tile.flipped {
+            background-color: white;
+        }
+        #score {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #7f8c8d;
+        }
+        #reset-btn {
+            padding: 8px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        #reset-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐦 Flying Bird Task</h1>
+        <div class="timer">Time left: <span id="time">30</span>s</div>
+        <div id="score">Moves: 0</div>
+        <button id="reset-btn">New Game</button>
+        <div class="game-board" id="game-board"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const birds = ['🐦', '🦜', '🦅', '🦉', '🐧', '🦢', '🦩', '🐥'];
+            const tiles = [...birds, ...birds]; // 8 pairs (16 tiles)
+            
+            let flippedTiles = [];
+            let matchedTiles = [];
+            let moves = 0;
+            let timeLeft = 30;
+            let timer;
+            let boardLocked = false;
+
+            const gameBoard = document.getElementById('game-board');
+            const scoreDisplay = document.getElementById('score');
+            const timeDisplay = document.getElementById('time');
+            const resetBtn = document.getElementById('reset-btn');
+
+            // Shuffle tiles
+            function shuffle(array) {
+                return array.sort(() => Math.random() - 0.5);
+            }
+
+            // Start/reset timer
+            function startTimer() {
+                clearInterval(timer);
+                timeLeft = 60;
+                timeDisplay.textContent = timeLeft;
+                timer = setInterval(() => {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        boardLocked = true;
+                        setTimeout(() => alert("Time's up! Try again."), 100);
+                    }
+                }, 1000);
+            }
+
+            // Initialize game
+            function initGame() {
+                flippedTiles = [];
+                matchedTiles = [];
+                moves = 0;
+                boardLocked = false;
+                scoreDisplay.textContent = `Moves: ${moves}`;
+                gameBoard.innerHTML = '';
+                
+                shuffle(tiles).forEach((bird, index) => {
+                    const tile = document.createElement('div');
+                    tile.className = 'tile';
+                    tile.dataset.bird = bird;
+                    tile.dataset.index = index;
+                    tile.addEventListener('click', flipTile);
+                    gameBoard.appendChild(tile);
+                });
+
+                startTimer();
+            }
+
+            // Flip tile
+            function flipTile() {
+                if (boardLocked || this.classList.contains('matched') || flippedTiles.includes(this)) return;
+
+                this.textContent = this.dataset.bird;
+                this.classList.add('flipped');
+                flippedTiles.push(this);
+
+                if (flippedTiles.length === 2) {
+                    boardLocked = true;
+                    moves++;
+                    scoreDisplay.textContent = `Moves: ${moves}`;
+                    checkMatch();
+                }
+            }
+
+            // Check for match
+            function checkMatch() {
+                const [tile1, tile2] = flippedTiles;
+                const isMatch = tile1.dataset.bird === tile2.dataset.bird;
+
+                if (isMatch) {
+                    tile1.classList.add('matched');
+                    tile2.classList.add('matched');
+                    matchedTiles.push(tile1, tile2);
+                    flippedTiles = [];
+                    boardLocked = false;
+
+                    if (matchedTiles.length === tiles.length) {
+                        clearInterval(timer);
+                        setTimeout(() => alert(`You won in ${moves} moves with ${timeLeft}s left!`), 300);
+                    }
+                } else {
+                    setTimeout(() => {
+                        tile1.textContent = '';
+                        tile2.textContent = '';
+                        tile1.classList.remove('flipped');
+                        tile2.classList.remove('flipped');
+                        flippedTiles = [];
+                        boardLocked = false;
+                    }, 800);
+                }
+            }
+
+            // Reset game
+            resetBtn.addEventListener('click', initGame);
+
+            // Start the game
+            initGame();
+        });
+    </script>
+</body>
+</html>
+    <!-- Step 5: Join the Community -->
+    <section>
+        <h2>Step 5: Join the Community</h2>
+        <p>Connect with other learners and developers:</p>
+        <ul>
+            <li><strong>Forums:</strong> Join Reddit’s r/webdev or Stack Overflow.</li>
+            <li><strong>Social Media:</strong> Follow web development influencers on Twitter and LinkedIn.</li>
+            <li><strong>Hackathons:</strong> Participate in coding challenges and events.</li>
+        </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section>
+        <h2>Conclusion</h2>
+        <p>Learning HTML, CSS, and JavaScript is the first step to becoming a web developer. With free resources, practice, and community support, you can build a successful career in tech. Start your journey today!"</p>
+    </section>
+</body>
+</html>

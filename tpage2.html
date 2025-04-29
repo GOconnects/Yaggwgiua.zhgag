@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how Artificial Intelligence is revolutionizing healthcare. Learn about AI applications, benefits, and challenges in the medical field.">
+    <meta name="keywords" content="AI in healthcare, artificial intelligence, medical AI, healthcare technology">
+    <title>Artificial Intelligence in Healthcare: A Comprehensive Guide</title>
+     <link rel="stylesheet" href="main.css" type="text/css" media="all" /> 
+     
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMCtRa3EWXPzJgkMJpSGLUBRF8FB4hpEbb-mO_jZyOGg&s'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h2, h3 {
+            color: #0073e6;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 8px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #0073e6;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- COUNTDOWN MODULE v2.1 - Just paste this anywhere in your <body> -->
+<div id="lux-countdown"></div>
+
+<style>
+  /* Embedded CSS - No external dependencies */
+  #lux-countdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0A1A2F;
+    color: #D4AF37;
+    border-radius: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+</style>
+
+<script>
+  // Self-contained script with configurable options
+  (function() {
+    // CONFIGURATION (edit these values)
+    const config = {
+      duration: 30,          // Countdown length (seconds)
+      endMessage: "Done!",   // Final message
+      scrollPoints: [        // Auto-scroll targets (seconds remaining => CSS selector)
+        { at: 25, target: '.mid' },
+        { at: 15, target: '.end' }
+      ],
+      blockNavigation: true  // Prevent early exit
+    };
+    
+    // Initialize
+    const countdownEl = document.getElementById('lux-countdown');
+    let timeLeft = config.duration;
+    countdownEl.textContent = timeLeft;
+    
+    // Core functionality
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+      
+      // Handle scroll points
+      config.scrollPoints.forEach(point => {
+        if (timeLeft === point.at) {
+          const target = document.querySelector(point.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      
+      // End behavior
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        countdownEl.textContent = config.endMessage;
+        setTimeout(() => countdownEl.style.opacity = '0', 2000);
+        if (config.blockNavigation) window.removeEventListener('beforeunload', blockExit);
+      }
+    }, 1000);
+    
+    // Navigation blocking
+    function blockExit(e) {
+      e.preventDefault();
+      e.returnValue = '';
+      window.open(window.location.href, '_blank');
+      return "Please wait for the countdown to finish";
+    }
+    if (config.blockNavigation) window.addEventListener('beforeunload', blockExit);
+  })();
+</script>
+
+
+
+
+
+
+    
+    <header>
+        <h1>Artificial Intelligence in Healthcare: A Comprehensive Guide</h1>
+    </header>
+
+    <!-- Video Section -->
+    <section>
+        <h2>Watch: How AI is Transforming Healthcare</h2>
+    <!-- Ad Slot 1 (Top) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-gw-3+1f-3d+2z"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction to AI in Healthcare</h2>
+        <p>Artificial Intelligence is revolutionizing healthcare by improving diagnostics, treatment, and patient care. From predictive analytics to robotic surgeries, AI is transforming the medical field. Let’s explore how!</p>
+    </section>
+    <!-- Ad Slot 1 (Top) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-gw-3+1f-3d+2z"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <!-- Step 1: Applications of AI in Healthcare -->
+    <section>
+        <h2>Step 1: Applications of AI in Healthcare</h2>
+        <p>AI is being used in various ways in healthcare:</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Application</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diagnostics</td>
+                        <td>AI algorithms analyze medical images and data to detect diseases like cancer.</td>
+                    </tr>
+                    <tr>
+                        <td>Predictive Analytics</td>
+                        <td>AI predicts patient outcomes and helps in preventive care.</td>
+                    </tr>
+                    <tr>
+                        <td>Robotic Surgery</td>
+                        <td>AI-powered robots assist surgeons with precision and accuracy.</td>
+                    </tr>
+                    <tr>
+                        <td>Drug Discovery</td>
+                        <td>AI accelerates the development of new drugs and treatments.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+<div class="mid">
+    
+</div>
+    <!-- Step 2: Benefits of AI in Healthcare -->
+    <section>
+        <h2>Step 2: Benefits of AI in Healthcare</h2>
+        <p>AI offers numerous benefits in healthcare:</p>
+            <!-- Ad Slot 1 (Top) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-gw-3+1f-3d+2z"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+        <ul>
+            <li><strong>Improved Accuracy:</strong> AI reduces human error in diagnostics and treatment.</li>
+            <li><strong>Cost Efficiency:</strong> AI streamlines processes, reducing healthcare costs.</li>
+            <li><strong>Personalized Care:</strong> AI tailors treatments to individual patients.</li>
+            <li><strong>Faster Diagnoses:</strong> AI analyzes data quickly, speeding up diagnoses.</li>
+        </ul>
+    </section>
+
+    <!-- Step 3: Challenges of AI in Healthcare -->
+    <section>
+        <h2>Step 3: Challenges of AI in Healthcare</h2>
+        <p>Despite its benefits, AI in healthcare faces challenges:</p>
+        <ul>
+            <li><strong>Data Privacy:</strong> Protecting patient data is a major concern.</li>
+            <li><strong>Regulation:</strong> Lack of clear regulations for AI in healthcare.</li>
+            <li><strong>Adoption:</strong> Resistance from healthcare professionals.</li>
+            <li><strong>Cost:</strong> High initial investment in AI technology.</li>
+        </ul>
+    </section>
+
+    <!-- Step 4: Future of AI in Healthcare -->
+    <section>
+        <h2>Step 4: Future of AI in Healthcare</h2>
+        <p>The future of AI in healthcare is promising:</p>
+        <ul>
+            <li><strong>Wider Adoption:</strong> More hospitals and clinics will adopt AI.</li>
+            <li><strong>Advanced Diagnostics:</strong> AI will detect diseases earlier and more accurately.</li>
+            <li><strong>Telemedicine:</strong> AI will enhance remote patient care.</li>
+            <li><strong>AI Ethics:</strong> Development of ethical guidelines for AI use.</li>
+        </ul>
+    </section><div class="end">
+    
+</div>
+
+    <!-- Conclusion -->
+    <section>
+        <h2>Conclusion</h2>
+        <p>Artificial Intelligence is transforming healthcare by improving diagnostics, treatment, and patient care. While challenges exist, the future of AI in healthcare is bright. Stay informed and embrace the change!"</p>
+    </section>
+        <!-- Ad Slot 1 (Top) -->
+    <div class="ad-container">
+      <!-- Google AdSense Native Ad -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-gw-3+1f-3d+2z"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+  
+
+</body>
+</html>
