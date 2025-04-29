@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best credit cards for 2025. Compare top travel, cashback, balance transfer, and credit-building cards with detailed reviews and tips.">
+    <meta name="keywords" content="best credit cards 2025, top credit cards, travel credit cards, cashback credit cards, balance transfer cards">
+    <title>Best Credit Cards 2025 - Top Picks and Reviews</title>
+      <link rel="stylesheet" href="main.css" type="text/css" media="all" /> 
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxhquay1kjwDUFCLSx6VdeVE0il_oDUUCzfZVwQbWyYPqrSHa8SoAyTY&s=10');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+       
+    </style>
+     
+</head>
+<body>
+    <header>
+        <h1>Best Credit Cards 2025: Top Picks and Reviews</h1>
+    </header>
+
+    <!-- Video Section -->
+    <section>
+        <h2>Watch: Best Credit Cards for 2025</h2>
+        <iframe src="https://www.youtube.com/embed/placeholder" title="Best Credit Cards 2025" allowfullscreen></iframe>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction to Credit Cards in 2025</h2>
+        <p>In 2025, credit cards are expected to offer advanced features like enhanced rewards, AI-driven spending insights, and improved security measures. Here’s a guide to the best credit cards for 2025.</p>
+    </section>
+
+    <!-- Key Factors -->
+    <section>
+        <h2>Key Factors to Consider</h2>
+        <ul>
+            <li><strong>Rewards and Benefits:</strong> Look for cashback, travel points, or exclusive perks.</li>
+            <li><strong>Interest Rates (APR):</strong> Low APR for balance transfers or purchases.</li>
+            <li><strong>Fees:</strong> Annual fees, foreign transaction fees, and late payment fees.</li>
+            <li><strong>Credit Score Requirements:</strong> Cards for excellent, good, or fair credit.</li>
+            <li><strong>Security Features:</strong> Contactless payments, fraud protection, and biometric authentication.</li>
+        </ul>
+    </section>
+
+    <!-- Top Credit Card Companies -->
+    <section>
+        <h2>Top Reliable Credit Card Companies for 2025</h2>
+        <ul>
+            <li><strong>Chase:</strong> Known for travel rewards and cashback cards.</li>
+            <li><strong>American Express:</strong> Offers premium travel and business cards.</li>
+            <li><strong>Capital One:</strong> Great for cashback and travel rewards.</li>
+            <li><strong>Citi:</strong> Known for balance transfer and cashback cards.</li>
+            <li><strong>Discover:</strong> Excellent for cashback and no annual fee cards.</li>
+        </ul>
+    </section>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Flying Bird Task - Color Match</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            animation: fly 3s infinite alternate;
+        }
+        @keyframes fly {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        .timer {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .tile {
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .tile:hover {
+            transform: scale(1.05);
+        }
+        .tile.matched {
+            cursor: default;
+            opacity: 0.5;
+        }
+        #score {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        #reset-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #reset-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Flying Bird Task 🐦</h1>
+        <div class="timer">Time left: <span id="time">30</span>s</div>
+        <p>Match the colors before time runs out!</p>
+        <div id="score">Moves: 0</div>
+        <button id="reset-btn">Reset Game</button>
+        <div class="game-board" id="game-board"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colors = [
+                'red', 'blue', 'green', 'yellow',
+                'purple', 'orange', 'pink', 'cyan',
+                'red', 'blue', 'green', 'yellow',
+                'purple', 'orange', 'pink', 'cyan'
+            ];
+
+            let flippedTiles = [];
+            let matchedTiles = [];
+            let moves = 0;
+            let boardLocked = false;
+            let timeLeft = 30;
+            let timer;
+
+            const gameBoard = document.getElementById('game-board');
+            const scoreDisplay = document.getElementById('score');
+            const resetBtn = document.getElementById('reset-btn');
+            const timeDisplay = document.getElementById('time');
+
+            // Shuffle colors
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            // Start/reset timer
+            function startTimer() {
+                clearInterval(timer);
+                timeLeft = 60;
+                timeDisplay.textContent = timeLeft;
+                timer = setInterval(() => {
+                    timeLeft--;
+                    timeDisplay.textContent = timeLeft;
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        boardLocked = true;
+                        alert("Time's up! Try again.");
+                    }
+                }, 1000);
+            }
+
+            // Initialize the game
+            function initGame() {
+                flippedTiles = [];
+                matchedTiles = [];
+                moves = 0;
+                scoreDisplay.textContent = `Moves: ${moves}`;
+                boardLocked = false;
+                gameBoard.innerHTML = '';
+                
+                const shuffledColors = shuffle([...colors]);
+                
+                shuffledColors.forEach((color, index) => {
+                    const tile = document.createElement('div');
+                    tile.classList.add('tile');
+                    tile.dataset.color = color;
+                    tile.dataset.index = index;
+                    tile.addEventListener('click', flipTile);
+                    gameBoard.appendChild(tile);
+                });
+
+                startTimer();
+            }
+
+            // Flip a tile
+            function flipTile() {
+                if (boardLocked || this.classList.contains('matched') || flippedTiles.includes(this)) return;
+
+                this.style.backgroundColor = this.dataset.color;
+                flippedTiles.push(this);
+
+                if (flippedTiles.length === 2) {
+                    boardLocked = true;
+                    moves++;
+                    scoreDisplay.textContent = `Moves: ${moves}`;
+                    checkMatch();
+                }
+            }
+
+            // Check if flipped tiles match
+            function checkMatch() {
+                const [tile1, tile2] = flippedTiles;
+                const color1 = tile1.dataset.color;
+                const color2 = tile2.dataset.color;
+
+                if (color1 === color2) {
+                    tile1.classList.add('matched');
+                    tile2.classList.add('matched');
+                    matchedTiles.push(tile1, tile2);
+                    flippedTiles = [];
+                    boardLocked = false;
+
+                    if (matchedTiles.length === colors.length) {
+                        clearInterval(timer);
+                        setTimeout(() => alert(`You won in ${moves} moves with ${timeLeft}s left!`), 500);
+                    }
+                } else {
+                    setTimeout(() => {
+                        tile1.style.backgroundColor = '#ddd';
+                        tile2.style.backgroundColor = '#ddd';
+                        flippedTiles = [];
+                        boardLocked = false;
+                    }, 1000);
+                }
+            }
+
+            // Reset game
+            resetBtn.addEventListener('click', initGame);
+
+            // Start the game
+            initGame();
+        });
+    </script>
+</body>
+</html>
+    
+    <!-- Comparison Table -->
+    <section>
+        <h2>Comparison of Best Credit Cards 2025</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Card Name</th>
+                        <th>Category</th>
+                        <th>Rewards</th>
+                        <th>Annual Fee</th>
+                        <th>APR</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chase Sapphire Preferred®</td>
+                        <td>Travel</td>
+                        <td>2x points on travel and dining</td>
+                        <td>$95</td>
+                        <td>16.99% - 23.99%</td>
+                        <td>Frequent travelers</td>
+                    </tr>
+                    <tr>
+                        <td>Amex Platinum®</td>
+                        <td>Travel</td>
+                        <td>5x points on flights and hotels</td>
+                        <td>$695</td>
+                        <td>N/A</td>
+                        <td>Luxury travel</td>
+                    </tr>
+                    <tr>
+                        <td>Capital One Venture X®</td>
+                        <td>Travel</td>
+                        <td>2x miles on every purchase</td>
+                        <td>$395</td>
+                        <td>19.99% - 29.99%</td>
+                        <td>Frequent travelers</td>
+                    </tr>
+                    <tr>
+                        <td>Citi Double Cash®</td>
+                        <td>Cashback</td>
+                        <td>2% cashback</td>
+                        <td>$0</td>
+                        <td>15.99% - 25.99%</td>
+                        <td>Everyday spending</td>
+                    </tr>
+                    <tr>
+                        <td>Discover it® Cash Back</td>
+                        <td>Cashback</td>
+                        <td>5% cashback on rotating categories</td>
+                        <td>$0</td>
+                        <td>14.99% - 23.99%</td>
+                        <td>Budget-conscious users</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section>
+        <h2>Conclusion</h2>
+        <p>Choosing the best credit card in 2025 depends on your spending habits, financial goals, and credit score. Compare the top options and select the card that aligns with your needs.</p>
+    </section>
+</body>
+</html>
