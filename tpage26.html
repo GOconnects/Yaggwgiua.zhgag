@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the most expensive watches in the world. Learn about their features, price points, and what makes them stand out in the luxury watch market.">
+    <meta name="keywords" content="most expensive watches, luxury watches, high-end watches, expensive timepieces">
+    <title>The Most Expensive Watches in the World: A Comprehensive Guide</title>
+     <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQtGn2yWl31pqDG-7gmEVfuSsCY6CUZD1LNg&s'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- COUNTDOWN MODULE v2.1 - Just paste this anywhere in your <body> -->
+<div id="lux-countdown"></div>
+ 
+<style>
+  /* Embedded CSS - No external dependencies */
+  #lux-countdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0A1A2F;
+    color: #D4AF37;
+    border-radius: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+</style>
+
+<script>
+  // Self-contained script with configurable options
+  (function() {
+    // CONFIGURATION (edit these values)
+    const config = {
+      duration: 30,          // Countdown length (seconds)
+      endMessage: "Done!",   // Final message
+      scrollPoints: [        // Auto-scroll targets (seconds remaining => CSS selector)
+        { at: 25, target: '.mid' },
+        { at: 15, target: '.end' }
+      ],
+      blockNavigation: true  // Prevent early exit
+    };
+    
+    // Initialize
+    const countdownEl = document.getElementById('lux-countdown');
+    let timeLeft = config.duration;
+    countdownEl.textContent = timeLeft;
+    
+    // Core functionality
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+      
+      // Handle scroll points
+      config.scrollPoints.forEach(point => {
+        if (timeLeft === point.at) {
+          const target = document.querySelector(point.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      
+      // End behavior
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        countdownEl.textContent = config.endMessage;
+        setTimeout(() => countdownEl.style.opacity = '0', 2000);
+        if (config.blockNavigation) window.removeEventListener('beforeunload', blockExit);
+      }
+    }, 1000);
+    
+    // Navigation blocking
+    function blockExit(e) {
+      e.preventDefault();
+      e.returnValue = '';
+      window.open(window.location.href, '_blank');
+      return "Please wait for the countdown to finish";
+    }
+    if (config.blockNavigation) window.addEventListener('beforeunload', blockExit);
+  })();
+</script>
+    
+    <header>
+        <h1>The Most Expensive Watches in the World: A Comprehensive Guide</h1>
+    </header>
+
+    <!-- Video Section -->
+    <section>
+        <h2>Watch: The Most Expensive Watches</h2>
+        <iframe src="https://www.youtube.com/embed/placeholder" title="Most Expensive Watches" allowfullscreen></iframe>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction to Luxury Watches</h2>
+        <p>Luxury watches are more than just timepieces—they’re works of art. From intricate designs to rare materials, these watches redefine exclusivity. Let’s explore the most expensive watches in the world and what makes them so special.</p>
+    </section>
+
+    <!-- Step 1: What Makes a Watch Expensive? -->
+    <section>
+        <h2>Step 1: What Makes a Watch Expensive?</h2>
+        <p>Several factors contribute to the high price of luxury watches:</p>
+        <ul>
+            <li><strong>Materials:</strong> Gold, diamonds, and rare gems.</li>
+            <li><strong>Craftsmanship:</strong> Handcrafted by master watchmakers.</li>
+            <li><strong>Brand:</strong> Prestigious brands like Patek Philippe and Rolex.</li>
+            <li><strong>Complexity:</strong> Intricate movements and complications.</li>
+        </ul>
+    </section>
+
+    <!-- Step 2: Top Most Expensive Watches -->
+    <section>
+        <h2>Step 2: Top Most Expensive Watches</h2>
+        <p>Here are the most expensive watches in the world:</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Watch</th>
+                        <th>Price</th>
+                        <th>Key Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Graff Diamonds Hallucination</td>
+                        <td>$55 million</td>
+                        <td>110 carats of rare colored diamonds</td>
+                    </tr>
+                    <tr>
+                        <td>Patek Philippe Grandmaster Chime</td>
+                        <td>$31 million</td>
+                        <td>20 complications, handcrafted design</td>
+                    </tr>
+                    <tr>
+                        <td>Rolex Daytona Paul Newman</td>
+                        <td>$17.8 million</td>
+                        <td>Rare vintage model, iconic design</td>
+                    </tr>
+                    <tr>
+                        <td>Jacob & Co. Billionaire Watch</td>
+                        <td>$18 million</td>
+                        <td>260 carats of emerald-cut diamonds</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Step 3: Features of Luxury Watches -->
+    <section>
+        <h2>Step 3: Features of Luxury Watches</h2>
+        <p>Luxury watches offer more than just a high price tag. Here’s what sets them apart:</p>
+        <ul>
+            <li><strong>Design:</strong> Handcrafted with premium materials like gold and diamonds.</li>
+            <li><strong>Exclusivity:</strong> Limited editions and personalized options.</li>
+            <li><strong>Technology:</strong> Intricate movements and complications.</li>
+            <li><strong>Heritage:</strong> Rich history and brand prestige.</li>
+        </ul>
+    </section>
+
+    <!-- Step 4: Who Buys These Watches? -->
+    <section>
+        <h2>Step 4: Who Buys These Watches?</h2>
+        <p>Luxury watches appeal to a specific audience:</p>
+        <ul>
+            <li><strong>High-Net-Worth Individuals:</strong> Those who value exclusivity and status.</li>
+            <li><strong>Collectors:</strong> People who invest in rare and unique items.</li>
+            <li><strong>Watch Enthusiasts:</strong> Individuals who appreciate craftsmanship and history.</li>
+        </ul>
+    </section>
+
+    <!-- Step 5: Are Luxury Watches Worth It? -->
+    <section>
+        <h2>Step 5: Are Luxury Watches Worth It?</h2>
+        <p>While luxury watches come with a hefty price tag, they offer unique benefits:</p>
+        <ul>
+            <li><strong>Status Symbol:</strong> A statement of wealth and exclusivity.</li>
+            <li><strong>Investment:</strong> Rare watches often appreciate in value.</li>
+            <li><strong>Craftsmanship:</strong> Handcrafted with exceptional quality.</li>
+        </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section>
+        <h2>Conclusion</h2>
+        <p>Luxury watches are more than just timepieces—they’re works of art. From diamond-encrusted designs to intricate movements, these watches redefine exclusivity. Whether you’re a collector or a watch enthusiast, the most expensive watches in the world are sure to impress!"</p>
+    </section>
+</body>
+</html>
