@@ -2,14 +2,13 @@
 header
 {
     background-repeat: no-repeat;
-    background-size: auto ;
+    background-size: cover;
 }
 header h1 {
-    display:none;
             font-size: 2.5rem;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            color: #0073e6;
+            color: grey;
         }
         h2, h3 {
             color: #0073e6;
