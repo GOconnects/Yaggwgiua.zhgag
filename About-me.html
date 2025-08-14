@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamza Isa Ibrahim | Frontend & Blockchain Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --skill-bg: #e0e7ff;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: var(--bg);
+      transform: skewY(-2deg);
+      z-index: 1;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    #about .quote {
+      font-style: italic;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding: 0 2rem;
+    }
+
+    #about .quote::before, #about .quote::after {
+      content: '"';
+      color: var(--primary);
+      font-size: 1.2em;
+    }
+
+    #about p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+
+    .skill {
+      background: var(--skill-bg);
+      color: var(--primary-dark);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill:hover {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Experience & Projects */
+    .experience-item, .project {
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .experience-item:last-child, .project:last-child {
+      border-bottom: none;
+    }
+
+    .experience-item h3, .project h3 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .experience-item .date, .project .date {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .experience-item p, .project p {
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+    }
+
+    /* Education & Courses */
+    .education-item, .course {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contact Section */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+    }
+
+    footer {
+      background: var(--text);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: auto;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section {
+        padding: 1.5rem;
+      }
+      .experience-item h3, .project h3 {
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hamza Isa Ibrahim</h1>
+    <p>Frontend Developer | Blockchain Enthusiast | Software Solutions Consultant | Entrepreneur</p>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+
+<img src="https://goconnects.cloud/Me.png" alt="Hamza Isa Ibrahim" class="profile-pic">
+      <p class="quote">You seek for honor yet you sleep tonight, however madness has many faces.</p>
+      <p>
+        I am a passionate and humble learner currently studying Psychology at the Federal University, Kashere. Alongside my academic journey, I've developed strong skills in frontend website and application development, blockchain technology, and software consulting.
+      </p>
+      <p>
+        With experience working in diverse roles — from agent assistant at Airtel shop, ambassador at OP Bank, to junior assistant roles in textile and phone repair, and tech companies like Big Solar Energy Nigeria and D-Man Tech — I’ve gained hands-on knowledge and a strong work ethic.
+      </p>
+      <p>
+        I am driven by continuous learning and sharing, which has led me to complete various courses such as Web3 School, Codcamp, CodOpen, Website Learner, Super Simple Dev, Akademy crypto, and SCTV Africa. These platforms have enriched my understanding of blockchain, web development, and the crypto space.
+      </p>
+      <p>
+        My goal is to leverage my entrepreneurial spirit and technical skills to create meaningful digital solutions and contribute positively to the tech ecosystem.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill">Frontend Development (HTML/CSS/JS)</div>
+        <div class="skill">React</div>
+        <div class="skill">Mobile App Development</div>
+        <div class="skill">Blockchain & Web3</div>
+        <div class="skill">Software Consulting</div>
+        <div class="skill">Entrepreneurship</div>
+        <div class="skill">Community Engagement</div>
+        <div class="skill">Technical Troubleshooting</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Goconnects.cloud <span class="date">2023-Present</span></h3>
+        <p>A dynamic platform that connects clients with multiple opportunities across science and nature, enabling easy access to scholarship, collaborations, and services.</p>
+        <p><strong>Technologies:</strong> React, Node.js</p>
+      </div>
+      <div class="project">
+        <h3>Ston.fi <span class="date"> Ambassadorship</span></h3>
+        <p>An innovative project under development focusing on decentralized finance solutions and blockchain applications.</p>
+        <p><strong>Technologies:</strong> Solidity, Web3.js, Ethereum</p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="experience-item">
+        <h3>Agent Assistant - Airtel Shop <span class="date">2021-2022</span></h3>
+        <p>Assisted customers and handled day-to-day operations, enhancing customer service and sales skills.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Ambassador - Opay Bank <span class="date">2025</span></h3>
+        <p>Represented the bank in community engagements and financial literacy campaigns.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Junior Assistant - Textile & Phone Repair <span class="date">2020-2021</span></h3>
+        <p>Provided technical support in phone repairs and managed textile sales, developing practical troubleshooting skills.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Tech Assistant - Big Solar Energy<span class="date">2022</span></h3>
+        <p>Supported solar energy installations and maintenance, gaining exposure to renewable energy tech.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Software & Phone Repair Assistant - D-Man Tech <span class="date">2022</span></h3>
+        <p>Assisted in software troubleshooting and phone repairs, enhancing technical expertise.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Seasonal Trade - Agricultural Products <span class="date">2019-2021</span></h3>
+        <p>Managed sales and logistics for fruits and agricultural products, demonstrating business acumen.</p>
+      </div>
+    </section>
+
+    <!-- Education & Courses -->
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <div class="education-item">
+        <h3>B.Sc Psychology - Federal University, Gashua<span class="date">2022-Present</span></h3>
+      </div>
+      <h3 style="margin-top: 1.5rem; font-size: 1.2rem; color: var(--primary);">Professional Certifications:</h3>
+      <div class="skills-container" style="margin-top: 0.5rem;">
+        <div class="skill">Web3 School</div>
+        <div class="skill">Codcamp</div>
+        <div class="skill">CodOpen</div>
+        <div class="skill">Website Learner</div>
+        <div class="skill">Super Simple Dev</div>
+        <div class="skill">Akademy Crypto</div>
+        <div class="skill">SCTV Africa</div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>I’m open to consultations, collaborations, corporate work, ambassadorships, and various engagements.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/ibnalqayyimayn" class="social-link" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://twitter.com/ibnalqayyimayn" class="social-link" target="_blank">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://t.me/ibnalqayyimayn" class="social-link" target="_blank">
+          <i class="fab fa-telegram"></i> Telegram
+        </a>
+        <a href="https://www.facebook.com/hamza.isaibrahim.14" class="social-link" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2023 Hamza Isa Ibrahim. All rights reserved.
+  </footer>
+
+  <script>
+    // Animate elements on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateItems = document.querySelectorAll('.skill, .experience-item, .project, .education-item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animateItems.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.4s ease';
+        observer.observe(item);
+      });
+    });
+  </script>
+</body>
+</html>
